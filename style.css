@@ -1,0 +1,148 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    background-image: url('https://cdn.pixabay.com/photo/2018/04/01/15/00/galaxy-3281150_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ecf0f1;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #ecf0f1;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content ul li {
+    margin-bottom: 15px;
+}
+
+.content ul li a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(52, 152, 219, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.content ul li a:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.05);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Adaptabilidad en dispositivos móviles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .content ul li a {
+        font-size: 1rem;
+    }
+}
