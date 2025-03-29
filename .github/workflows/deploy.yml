@@ -1,0 +1,27 @@
+name: Validar HTML y CSS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Validar HTML con W3C Validator
+        run: |
+          sudo apt-get install -y w3c-markup-validator
+          w3c_validator index.html
+
+      - name: Validar CSS con CSS Lint
+        run: |
+          npm install -g csslint
+          csslint style.css
