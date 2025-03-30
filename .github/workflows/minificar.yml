@@ -1,0 +1,26 @@
+name: Minificar HTML y CSS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Instalar html-minifier
+        run: npm install -g html-minifier
+
+      - name: Instalar clean-css
+        run: npm install -g clean-css-cli
+
+      - name: Minificar HTML
+        run: html-minifier --input-dir ./ --output-dir ./ --file-ext html --collapse-whitespace --remove-comments --minify-css true
+
+      - name: Minificar CSS
+        run: cleancss -o style.min.css style.css
